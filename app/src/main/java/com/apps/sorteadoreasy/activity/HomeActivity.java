@@ -30,9 +30,9 @@ public class HomeActivity extends AppCompatActivity {
         btnRaffle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int x = new Random().nextInt(11);
-                numRaffle.setText("N" + x);
-                Toast.makeText(HomeActivity.this, "Iniciar Sorteio", Toast.LENGTH_SHORT).show();
+                String numFim = (String) numEnd.getText();
+                int x = new Random().nextInt(Integer.parseInt(numFim));
+                numRaffle.setText(String.valueOf(x));
             }
         });
         
