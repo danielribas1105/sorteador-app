@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import com.apps.sorteadoreasy.R;
 
+import java.util.Random;
+
 public class HomeActivity extends AppCompatActivity {
     
     private TextView numStart, numEnd, numRaffle;
@@ -28,7 +30,9 @@ public class HomeActivity extends AppCompatActivity {
         btnRaffle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(HomeActivity.this, "Iniciar Sorteio", Toast.LENGTH_SHORT).show();
+                int num = new Random().nextInt();
+                numRaffle.setText(num);
+                //Toast.makeText(HomeActivity.this, "Iniciar Sorteio", Toast.LENGTH_SHORT).show();
             }
         });
         
